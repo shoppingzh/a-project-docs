@@ -5,7 +5,8 @@ import vite from './vite.config'
 export default defineConfig({
   base: '/',
   appearance: true,
-  title: 'VitePress Template',
+  title: '工程化',
+  description: '一个项目背后的故事',
   lastUpdated: true,
   // 标签页logo
   head: [
@@ -18,26 +19,24 @@ export default defineConfig({
       lazyLoading: true,
     }
   },
+  ignoreDeadLinks: true,
 
   themeConfig: {
     logo: '/logo.png',
-    ignoreDeadLinks: true,
     lastUpdatedText: '最近更新于',
     // 2/3/4级标题均形成目录
     outline: [2, 4],
     outlineTitle: '目录',
     nav: [{
-      text: '🎯 快速入手',
-      link: '/start.md'
+      text: '工程基础',
+      link: '/base/性能优化'
     }],
     sidebar: autoGenerateSidebar() as any,
-
     // 编辑
     editLink: {
-      pattern: 'https://github.com/shoppingzh/vitepress-template/edit/main/docs/:path',
+      pattern: 'https://github.com/shoppingzh/a-project-docs/edit/main/docs/:path',
       text: '在Github编辑',
     },
-
     // 搜索
     search: {
       provider: 'local',

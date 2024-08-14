@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { autoGenerateSidebar } from 'press-util'
+import { autoGenerateSidebar, getFirstDocLink } from 'press-util'
 import vite from './vite.config'
 
 export default defineConfig({
@@ -29,7 +29,13 @@ export default defineConfig({
     outlineTitle: '目录',
     nav: [{
       text: '工程基础',
-      link: '/base/性能优化'
+      link: getFirstDocLink('base')
+    }, {
+      text: '应用基础',
+      link: getFirstDocLink('app-base')
+    }, {
+      text: '应用上层',
+      link: getFirstDocLink('app')
     }],
     sidebar: autoGenerateSidebar() as any,
     // 编辑

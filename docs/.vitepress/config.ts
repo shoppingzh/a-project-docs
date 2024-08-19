@@ -31,9 +31,6 @@ export default defineConfig({
       text: '工程基础',
       link: getFirstDocLink('base')
     }, {
-      text: '应用基础',
-      link: getFirstDocLink('appbase')
-    }, {
       text: '应用上层',
       link: getFirstDocLink('app')
     }],
